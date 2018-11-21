@@ -1,0 +1,10 @@
+[Unit]
+Description=A node server for the smart home
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/pi/smarthome-stuff/pi/main.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
